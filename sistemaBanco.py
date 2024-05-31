@@ -33,4 +33,5 @@ if escolha ==  3:
     calculo_v_retirado = saldo - valor
     
     print(f"Você retirou R$ {valor:.2f} e seu saldo atual é R$ {calculo_v_retirado:.2f}")
+    
         
