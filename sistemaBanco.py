@@ -23,6 +23,7 @@ if escolha ==  3:
         confirmacao = input("Você escolheu a opção saque, deseja continuar? ")
     print(f"O seu saldo disponivel: R$ {saldo:.2f}")
     valor = int(input("Quanto deseja retirar: "))
+    
     #loop caso o saque seja invalido
     
     while valor > saldo:
@@ -30,9 +31,10 @@ if escolha ==  3:
         valor = int(input("por favor informe quanto você deseja retirar: "))
          
     
-    calculo_v_retirado = saldo - valor
+    novo_saldo = saldo - valor
     
-    print(f"Você retirou R$ {valor:.2f} e seu saldo atual é R$ {calculo_v_retirado:.2f}")
+    print(f"Você retirou R$ {valor:.2f} e seu saldo atual é R$ {novo_saldo:.2f}")
+    saldo = novo_saldo
     
 if escolha == 2: 
     confirmacao = input("Você escolheu a opção deposito, deseja continuar? ")
@@ -47,7 +49,13 @@ if escolha == 2:
         print("Valor invalido. Por favor informe um valor positivo.")
         valor = float(input("quanto deseja depositar: "))
     
-    calculo_v_depositado = saldo + valor
-    print(f"Você depositou R$ {valor:.2f} e seu saldo atual é R$ {calculo_v_depositado}")
+    novo_saldo = saldo + valor
+    print(f"Você depositou R$ {valor:.2f} e seu saldo atual é R$ {novo_saldo:.2f}")
+    
+    saldo = novo_saldo
+    
+# escolha para voltar a interface inicial
+
+escolha_retorno = input("Deseja realizar outra ação(sim/não)? ".lower())      
     
         
