@@ -34,4 +34,20 @@ if escolha ==  3:
     
     print(f"Você retirou R$ {valor:.2f} e seu saldo atual é R$ {calculo_v_retirado:.2f}")
     
+if escolha == 2: 
+    confirmacao = input("Você escolheu a opção deposito, deseja continuar? ")
+    while confirmacao == "não":
+        print(" (1) Extrato (2) Deposito (3) Saque ")
+        escolha = int(input("selecione qual função você deseja utilizar: "))
+        confirmacao = input("Você escolheu a opção deposito, deseja continuar? ")
+    print(f"Saldo disponivel: R${saldo:.2f}")
+    valor = float(input("quanto deseja depositar: "))
+    
+    while valor < 0:
+        print("Valor invalido. Por favor informe um valor positivo.")
+        valor = float(input("quanto deseja depositar: "))
+    
+    calculo_v_depositado = saldo + valor
+    print(f"Você depositou R$ {valor:.2f} e seu saldo atual é R$ {calculo_v_depositado}")
+    
         
