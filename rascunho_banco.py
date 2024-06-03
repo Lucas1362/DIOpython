@@ -2,6 +2,7 @@
 
 saldo = 1000
 
+
 print("olá bem-vindo ao app Brazexcco")
 print(f"Seu saldo disponivel é R$ {saldo:.2f} ")
 print(" (1) Extrato (2) Deposito (3) Saque ")
@@ -40,7 +41,7 @@ if escolha ==  3:
     
     print(f"Você retirou R$ {valor:.2f} e seu saldo atual é R$ {novo_saldo:.2f}")
     saldo = novo_saldo
-    
+
 if escolha == 2: 
     confirmacao = input("Você escolheu a opção deposito, deseja continuar? ")
     
@@ -66,6 +67,6 @@ if escolha == 2:
     
 # escolha para voltar a interface inicial
 
-
-    
-        
+if escolha == 1:
+    print(f"Bem-vindo ao seu extrato")
+    print(extrato_produtos)
